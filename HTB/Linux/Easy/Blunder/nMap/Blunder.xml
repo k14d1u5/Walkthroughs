@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon May 27 06:56:22 2024 as: nmap -sT -sV -A -p- -oA Blunder 10.10.10.191 -->
+<nmaprun scanner="nmap" args="nmap -sT -sV -A -p- -oA Blunder 10.10.10.191" start="1716756982" startstr="Mon May 27 06:56:22 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.10.191" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1716756982" endtime="1716757102"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.191" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-response" count="65533" proto="tcp" ports="1-20,22-79,81-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-title" output="Blunder | A blunder of interesting facts"><elem key="title">Blunder | A blunder of interesting facts</elem>
+</script><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-generator" output="Blunder"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="21"/>
+<osmatch name="Linux 5.0" accuracy="98" line="68054">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="98"><cpe>cpe:/o:linux:linux_kernel:5.0</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0 - 5.4" accuracy="92" line="68121">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.15 - 5.8" accuracy="89" line="67250">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="HP P2000 G3 NAS device" accuracy="89" line="35046">
+<osclass type="storage-misc" vendor="HP" osfamily="embedded" accuracy="89"><cpe>cpe:/h:hp:p2000_g3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.3 - 5.4" accuracy="89" line="68158">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="89" line="55662">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.1" accuracy="88" line="56514">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0 - 5.5" accuracy="88" line="68098">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.1" accuracy="88" line="68139">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="Ubiquiti AirOS 5.5.9" accuracy="88" line="103333">
+<osclass type="WAP" vendor="Ubiquiti" osfamily="AirOS" osgen="5.X" accuracy="88"><cpe>cpe:/o:ubnt:airos:5.5.9</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="1347045" lastboot="Sat May 11 16:47:37 2024"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="1E3EC48A,228B6E90,78F325B0,5621C441,DE2C978E,7AA143A7"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="504A3150,504A31B5,504A3219,504A327E,504A32E2,504A3347"/>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="20.49"/>
+<hop ttl="2" ipaddr="10.10.10.191" rtt="21.67"/>
+</trace>
+<times srtt="21335" rttvar="1097" to="100000"/>
+</host>
+<runstats><finished time="1716757102" timestr="Mon May 27 06:58:22 2024" summary="Nmap done at Mon May 27 06:58:22 2024; 1 IP address (1 host up) scanned in 120.79 seconds" elapsed="120.79" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
