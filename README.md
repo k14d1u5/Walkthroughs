@@ -4,4 +4,4 @@ I wrote these walkthroughs so you can use them as a guide or support. All data a
 
 Thank you to everyone who finds and appreciates my little work.
 
-P.S: I am not an English native person, so sorry if you'll find some gramatical or sintax mistakes.
+P.S: I am not an English native person, so sorry if you'll find some grammatical or syntax errors.
