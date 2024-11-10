@@ -1,0 +1,35 @@
+PERSONAL COMMENTS:
+Una box da nervi, la password da trovare ok che uno ci poteva anche pensare, ma dopo tanti anni dalla box stessa non ci sarei mai andato a pensare. Per il resto ha fornito comunque un miglioramento per noi. Valutata tra Easy e Not too easy, rispettivamente per le due flag.
+
+
+
+REFERENCES:
+CVE-2018-9276
+
+
+
+
+Le scansioni nMap sono nella relativa cartella. Lanciati gli nMap sia con -sC che con --script vuln.
+Abbiamo visto che c'è FTP, siamo entrati con anonymous usando FileZilla e siamo stati in grado di reperire la user flag in:
+C:\Users\Public\user.txt
+
+Cercando dall'ftp da shell, a cui ci colleghiamo con il comando:
+ftp 10.10.10.152
+ed usando le credenziali anonymous/anonymoous
+troviamo i file di configurazione di PRTG Network Monitor nei path:
+C:\Users\All Users\Paessler\PRTG Network
+C:\ProgramData\Paessler\PRTG Network
+
+In particolare, dal file di configurazione .old.bak troviamo una password di accesso al database che è:
+PrTg@dmin2018
+
+A questo punto, visto che la box è stata fatta nel 2019, si deve fantasticare per inventarsi la nuova password di accesso al portale web che è:
+PrTg@dmin2019
+Lo username è:
+prtgadmin
+
+Cercando su Internet o su searchsploit, troviamo un exploit autenticato per l'applicativo, che corrisponde alla CVE-2018-9276. Tuttavia, non ha funzionato e ne cerchiamo un altro, trovato al link:
+https://github.com/A1vinSmith/CVE-2018-9276
+
+Lanciando tale exploit otteniamo uan shell da NT AUTHORITY\SYSTEM e possiamo prendere la root flag:
+13306bfbc7829185924ab0e55d57e663
